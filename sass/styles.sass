@@ -1,0 +1,302 @@
+$gothic-font-path: "../fonts"
+@font-face
+    src: url(#{$gothic-font-path}/showg.ttf)
+    font-family: gothic
+    
+*
+	margin: 0
+	padding: 0
+
+img
+	border:none
+	max-width: 100%
+
+a
+	text-decoration: none
+	color:#fff
+
+ul
+	list-style-type: none
+
+body
+	font-family: Tahoma,Verdana,sans-serif
+	font-size: 12px
+	color: #fff
+	background: #fff
+
+.wrapper
+    width: 1280px
+    margin: 0 auto
+
+    .logo-2
+        background: #066666
+        width: 30px
+        height: 110px
+        position: fixed
+        margin-top: 85px
+        h1
+            writing-mode: vertical-lr
+            text-orientation: upright
+            font-family: gothic
+            font-size: 29.33px
+            letter-spacing: -12px
+
+    .header
+        width: 1150px
+        height: 105px
+        margin: 10px auto
+        background-color: #022929
+
+        .logo-1 
+            h1
+                background-color: #066666
+                font-family: gothic
+                font-size: 29.33px
+                width: 105px
+                height: 30px
+                margin-top: 15px
+                padding-left: 18px
+        .mini-menu
+            display: none
+            margin: 10px auto
+            max-width: 440px
+            border: 1px solid rgb(153, 3, 3)
+            box-shadow: 0 0 8px rgb(255, 0, 0)
+            overflow: hidden
+            font-size: 18px
+            ul
+                text-align: center
+                margin: 0
+                padding: 0
+                list-style: none
+            .sub  
+                ul 
+                    display: none
+                    overflow: hidden
+                    background: #eee
+                    li 
+                        a 
+                            display: block
+                            padding: .7em 1em
+                            border-bottom: 1px dotted #bababa
+                            color: #514b92
+                            font-size: 12px
+                            text-decoration: none
+        
+                            &:hover, &.active
+                            padding-left: 1.3em
+                            background: #d8d8d8
+                            color: red
+                            &:after
+                            float: left
+                            margin-right: 6px
+                            line-height: 12px               
+        .nav
+            margin-top: 20px 
+            ul
+                margin-left: 10px 
+                li
+                    display: inline-block
+                    font-family: Tahoma
+                    font-size: 14px
+                    font-weight: bold
+                    text-align: center
+                    background-color: #066666
+                    width: 100px
+                    height: 30px
+                    cursor: pointer
+                &>li:last-child
+                    background-image: url('../images/arrow.png')
+                    background-repeat: no-repeat
+                    background-position: 84px 14px 
+                a
+                    display: block
+                    margin-top: 4px
+                #down 
+                    display: none 
+                    position: absolute
+                    z-index: 1000
+                    width: 150px
+                    transform: 4s
+                    ul
+                        position: relative
+                        left: -10px 
+                        li
+                            background-color: #066666
+                            list-style-type: none
+                            color: #ffffff
+                            font-size: 12px
+                            text-align: left
+                            width: 160px
+                            height: 42px
+                            padding-left: 4px
+                            border-bottom: 1px solid #83b3b3       
+                #drop
+                    margin-top: 4px
+    .container
+        .main-content
+            border: solid #066666 10px
+            background: #1e3a3a
+            width: 809px
+            height: 815px
+            margin-left: -20px
+            h2
+                font-family: Verdana
+                font-size: 48px
+                color: #fff
+                margin-top: 30px
+                margin-left: 30px
+            hr
+                width: 98%
+                margin-left: 5px
+                display: block
+                border-style: insert
+                border-top: 1px solid #000
+                border-bottom: 1px solid #616f6f
+
+            .par 
+                p
+                    margin-left: 25px
+                    margin-right: 25px
+                    text-indent: 35px
+        .aside
+            border: solid #055252 10px
+            background: #022929
+            margin-left: 29px
+            width: 341px
+            height: 815px 
+            h3
+                font-size: 16px
+                margin-top: 15px
+                margin-left: 10px
+            a
+                margin-left: 8px
+            .row:nth-of-type(2)
+                margin-left: 8px
+                margin-top: 10px
+
+            .row:nth-of-type(3)
+                margin-top: 40px
+            h4
+                font-size: 16px
+                margin-left: 10px
+            p
+                text-decoration: underline
+            .carousel-inner
+                background-color: #fff
+                width: 305px
+                height: 145px
+                margin-left: 10px
+                margin-top: 20px
+            .carousel-indicators 
+                li
+                    position: relative
+                    top: 40px
+                    width: 4px
+            .carousel-inner 
+                img
+                    width: 50%
+                    margin: 0 auto
+    .footer
+        margin-bottom: 10px
+        margin-top: 10px
+        margin-left: 64px
+        width: 1150px
+        height: 42px
+        background-color: #066666
+        .foot-nav 
+            margin-top: 12px
+            text-align: right
+            margin-right: 20px
+            ul 
+                li
+                    display: inline-block
+                    margin-left: 16px
+                    text-decoration: underline
+                    font-size: 14px
+        p
+            font-size: 14px
+            margin-top: 12px
+            margin-left: 20px
+
+
+@media only screen and (max-width: 1199px)
+    .wrapper
+        .container
+            max-width: 1144px
+            .main-content
+                width: 812px
+
+@media only screen and (max-width: 1024px)
+    .wrapper
+        width: 720px
+        .logo-2
+            left: 0px
+        .header
+            width: 836px    
+            .nav
+                ul
+                    width: 424px
+                    li
+                        
+                    & > li:last-child 
+                            background-position: 81px 15px
+                    #down
+                        ul
+                            position: relative
+                            
+                            li
+                                display: block
+                                a
+                                    margin-top: 0px
+        .container
+            .main-content
+                width: 500px
+                height: 1000px
+            .aside
+                margin: 0 auto
+
+        .footer
+            width: 830px
+            height: 100px
+            margin: 10px auto
+            p
+                text-align: center
+            .foot-nav
+                text-align: center
+
+@media only screen and (max-width: 768px)
+    .wrapper
+        width: 455px
+        .logo-2
+            display: none
+        .header
+            width: 440px
+            height: 240px
+            .mini-menu
+                display: block
+            .nav
+                display: none
+                ul
+                    margin-left: 0
+                    li
+                        width: 440px
+                    & > li:last-child
+                        background-position: 260px 14px
+                    #down
+                        ul
+                            left: 160px
+        .container
+            .main-content
+                width: 470px
+                height: 1100px
+            .aside
+                height: 700px
+        .footer
+            width: 450px
+            height: 100px
+            margin: 10px 10px
+            p
+                text-align: center
+            .foot-nav
+                text-align: center
